@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        changeProgram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ChangeProgramActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
