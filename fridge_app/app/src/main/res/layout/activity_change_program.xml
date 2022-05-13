@@ -22,13 +22,16 @@
         android:layout_below="@+id/title"
         android:layout_alignParentEnd="true"
         android:backgroundTint="#111"
+        android:layout_marginBottom="50dp"
         android:text="edit" />
 
     <RelativeLayout
         android:id="@+id/rel1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:paddingLeft="5dp"
         android:layout_below="@+id/editbtn">
+
         <RelativeLayout
             android:id="@+id/text1"
             android:layout_width="200dp"
@@ -37,19 +40,45 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="1 vegetable" />
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="1 vegetable"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="200dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_toRightOf="@+id/text1">
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="2 vegetable" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="2 vegetable"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -61,7 +90,8 @@
         android:id="@+id/rel2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@+id/rel1">
+        android:layout_below="@+id/rel1"
+        android:paddingLeft="5dp">
         <RelativeLayout
             android:id="@+id/text3"
             android:layout_width="200dp"
@@ -70,7 +100,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="hello1" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:padding="10dp"
+                android:text="hello1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
 
         </RelativeLayout>
         <RelativeLayout
@@ -81,7 +121,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="hello2" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:padding="10dp"
+                android:text="hello2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
 
         </RelativeLayout>
     </RelativeLayout>
@@ -91,7 +141,8 @@
         android:id="@+id/rel3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@+id/rel2">
+        android:layout_below="@+id/rel2"
+        android:paddingLeft="5dp">
         <RelativeLayout
             android:id="@+id/text5"
             android:layout_width="200dp"
@@ -100,7 +151,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="3 meat" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:padding="10dp"
+                android:text="3 meat"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
 
         </RelativeLayout>
 
@@ -113,7 +174,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="3 meat" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/white_grey"
+                android:padding="10dp"
+                android:text="3 meat"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
 
         </RelativeLayout>
 
@@ -138,13 +209,33 @@
     <!--</RelativeLayout>-->
 
 
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seektext3"/>
+
     <TextView
-        android:layout_alignParentBottom="true"
         android:id="@+id/seektext3"
         android:layout_width="346dp"
         android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="current_temperature_8" />
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="current_temperature_8"
+        android:textSize="14sp"
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/round_button"-->
+<!--        android:backgroundTint="#111"-->
+<!--        android:minWidth="300dp"-->
+<!--        android:minHeight="100dp"-->
+<!--        android:text="asdf"-->
+<!--        android:textSize="20sp" />-->
 
 
 
