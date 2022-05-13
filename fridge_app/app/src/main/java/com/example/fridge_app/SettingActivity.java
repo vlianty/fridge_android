@@ -13,14 +13,14 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-//        button2 = findViewById(R.id.button2);
-//        button2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(getApplicationContext(), edit_button_activity.class);
-//                startActivity(intent);
-//            }
-//        }
+        button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), EditGoodsIdActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 }
