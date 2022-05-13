@@ -17,10 +17,9 @@ public class SettingActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(getApplicationContext(), EditGoodsIdActivity.class);
                 startActivity(intent);
             }
-        }
+        });
     }
 }
