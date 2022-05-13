@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jerie/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_setting.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_change_program.xml" value="0.253125" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.253125" />
       </map>
     </option>
   </component>
