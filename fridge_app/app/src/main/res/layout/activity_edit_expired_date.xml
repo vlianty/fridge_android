@@ -10,7 +10,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
+        android:textAlignment="center"
         android:text="Edit expired date"
         android:textSize="40sp"
         android:textStyle="bold"/>
