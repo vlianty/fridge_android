@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChangeProgramActivity">
+    tools:context=".DrawerActivity">
 
     <TextView
         android:id="@+id/title"
@@ -15,26 +15,17 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
-        android:text="Change Program"
+        android:text="Drawer"
         android:textAlignment="center"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/editbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#111"
-        android:text="edit" />
 
     <RelativeLayout
         android:id="@+id/rel1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:paddingLeft="5dp"
-        android:layout_below="@+id/editbtn">
+        android:layout_marginTop="150dp">
 
         <RelativeLayout
             android:id="@+id/text1"
@@ -93,13 +84,14 @@
     <RelativeLayout
         android:id="@+id/rel2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/rel1"
+        android:layout_height="120dp"
+        android:layout_marginTop="300dp"
         android:paddingLeft="5dp">
         <RelativeLayout
             android:id="@+id/text3"
             android:layout_width="200dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -112,7 +104,7 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="3 meat"
+                android:text="hello1"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -133,7 +125,7 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="4 meat"
+                android:text="hello2"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -144,13 +136,14 @@
     <RelativeLayout
         android:id="@+id/rel3"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/rel2"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
         android:paddingLeft="5dp">
         <RelativeLayout
             android:id="@+id/text5"
             android:layout_width="200dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -163,7 +156,7 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="5 seafood"
+                android:text="3 meat"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -186,31 +179,13 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="6 seafood"
+                android:text="3 meat"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
 
     </RelativeLayout>
-    <!--    end of row 3-->
-
-    <!--<RelativeLayout-->
-    <!--    android:id="@+id/rel4"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="50dp"-->
-    <!--    >-->
-    <!--    <SeekBar-->
-    <!--        android:id="@+id/seekbar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="8dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        tools:ignore="MissingConstraints"-->
-    <!--        tools:layout_editor_absoluteY="629dp" -->
-    <!--        android:layout_below="@+id/seektext2"/>-->
-    <!--    -->
-    <!--</RelativeLayout>-->
 
 
     <SeekBar
@@ -227,19 +202,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="current temperature:0"
-        android:textSize="20sp" />
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/round_button"-->
-<!--        android:backgroundTint="#111"-->
-<!--        android:minWidth="300dp"-->
-<!--        android:minHeight="100dp"-->
-<!--        android:text="asdf"-->
-<!--        android:textSize="20sp" />-->
-
-
+        android:text="current_temperature_8"
+        android:textSize="14sp"
+        />
 
 </RelativeLayout>

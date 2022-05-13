@@ -10,11 +10,10 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:text="edit_goods_id"
+        android:text="Edit goods id"
+        android:textAlignment="center"
         android:textSize="40sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="370dp"

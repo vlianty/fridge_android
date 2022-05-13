@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 public class SettingActivity extends AppCompatActivity {
-    Button button2;
+    Button button2, button3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -21,5 +23,18 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EditExpiredDateActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
+
+
 }
+
+
