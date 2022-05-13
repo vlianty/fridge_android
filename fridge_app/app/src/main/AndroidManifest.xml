@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fridge_app">
         <activity
+            android:name=".EditGoodsIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditExpiredDateActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingActivity"
             android:exported="false" />
         <activity
