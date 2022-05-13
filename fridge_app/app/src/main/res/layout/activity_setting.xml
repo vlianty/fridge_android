@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:text="Setting"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Door open for too long alert"
+        android:textColor="@color/black"
+
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/txtDoorSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="100dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:text="low_weight_alert"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/txtDoorSwitch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:text="expiration_date_alert"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/txtDoorSwitch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="200dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="250dp"
+        android:text="temperature_is_abnormal_alert"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/txtDoorSwitch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="250dp"
+        />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="edit_goods_id"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/material_on_background_disabled"
+        android:text="edit_expired_date"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+</RelativeLayout>
