@@ -14,11 +14,11 @@ public class VegetableSupplierActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vegetable_supplier);
-        anongButton = findViewById(R.id.anongButton);
+        anongButton = (ImageButton) findViewById(R.id.anongButton);
         anongButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AnongShopActivity.class);
+                Intent intent = new Intent(getApplicationContext(),NongNongActivity.class);
                 startActivity(intent);
             }
         });

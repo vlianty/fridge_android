@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fridge_app">
         <activity
+            android:name=".NongNongActivity"
+            android:exported="false" />
+        <activity
             android:name=".VegetableSupplierActivity"
             android:exported="false" />
         <activity
