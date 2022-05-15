@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:textSize="20sp"
-        android:text="Vegetable Farmers" />
+        android:text="Vegetable Farmers"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/MeSupBut"

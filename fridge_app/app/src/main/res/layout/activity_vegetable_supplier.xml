@@ -20,13 +20,7 @@
         android:textAlignment="center"
         android:textSize="50sp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="240dp"
-        app:srcCompat="@drawable/farmer" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -234,6 +228,15 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="550dp"
         android:text="Spinach" />
+
+    <ImageButton
+        android:id="@+id/anongButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="240dp"
+        app:srcCompat="@drawable/farmer" />
 
 
 </RelativeLayout>
