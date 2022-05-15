@@ -16,6 +16,9 @@
             android:name=".OrderActivity"
             android:exported="false" />
         <activity
+            android:name=".NewDrawerActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditDrawerActivity"
             android:exported="false" />
         <activity
