@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fridge_app">
         <activity
+            android:name=".NewDrawerActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditDrawerActivity"
             android:exported="false" />
         <activity

@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.util.Log;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnNewOrder,changeProgram, btnProgress, btnSettings, btnContactService, btnMaintenance;
+    Button btnNewOrder,changeProgram, btnProgress, btnSettings, btnContactService, btnMaintenance, btndrawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnSettings = findViewById(R.id.btnSettings);
         btnContactService = findViewById(R.id.btnContactService);
         btnMaintenance = findViewById(R.id.btnMaintenance);
+        btndrawer = findViewById(R.id.btndrawer);
 
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +42,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
+        btndrawer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NewDrawerActivity.class);
+                startActivity(intent);
+                //Log.d("test", "123");
+            }
+        });
 
     }
 }
