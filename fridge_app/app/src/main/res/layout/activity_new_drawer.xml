@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DrawerActivity">
+    tools:context=".NewDrawerActivity">
 
     <TextView
         android:id="@+id/title"
@@ -43,7 +43,7 @@
             android:layout_width="200dp"
             android:layout_height="match_parent">
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
@@ -57,7 +57,8 @@
                 android:padding="10dp"
                 android:text="1 vegetable"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/drawer1"/>
 
         </RelativeLayout>
 
@@ -66,7 +67,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/text1">
 
-            <TextView
+            <Button
                 android:id="@+id/text2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -100,7 +101,7 @@
             android:layout_height="match_parent"
             >
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -111,7 +112,7 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="hello1"
+                android:text="2 seafood"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -121,7 +122,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/text3">
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -132,7 +133,7 @@
                 android:backgroundTint="@color/white_grey"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="hello2"
+                android:text="3 seafood"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -152,7 +153,7 @@
             android:layout_height="match_parent"
             >
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -175,7 +176,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/text5">
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -195,7 +196,7 @@
     </RelativeLayout>
 
 
-    <SeekBar
+ <!--   <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/seektext3" />
@@ -211,6 +212,6 @@
         android:gravity="center"
         android:text="current_temperature_8"
         android:textSize="14sp"
-        />
+        />-->
 
 </RelativeLayout>

@@ -7,16 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class NewDrawerActivity extends AppCompatActivity {
+public class Drawer1Activity extends AppCompatActivity {
 
-    Button editbtn, drawer1;
+    Button editbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_drawer);
+        setContentView(R.layout.activity_drawer1);
         editbtn = findViewById(R.id.editbtn);
-        drawer1 = findViewById(R.id.drawer1);
 
         editbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,16 +25,7 @@ public class NewDrawerActivity extends AppCompatActivity {
                 //Log.d("test", "123");
             }
         });
-
-        drawer1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Drawer1Activity.class);
-                startActivity(intent);
-
-            }
-        });
-
     }
 }
 
+//商品細節切到編輯
