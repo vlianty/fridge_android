@@ -4,16 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jerie/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_anong_shop.xml" value="0.264" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_nong_nong.xml" value="0.16458333333333333" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_order.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/liant/OneDrive/Email attachments/Documents/GitHub/fridge_android/fridge_app/app/src/main/res/layout/activity_vegetable_supplier.xml" value="0.10989583333333333" />
         <entry key="app/src/main/res/drawable-v24/round_button.xml" value="0.114" />
         <entry key="app/src/main/res/layout/activity_change_program.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.22534790039062508" />
         <entry key="app/src/main/res/layout/activity_edit_button.xml" value="0.23105438232421877" />
-        <entry key="app/src/main/res/layout/activity_edit_drawer.xml" value="0.24512023925781257" />
+        <entry key="app/src/main/res/layout/activity_edit_drawer.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18795166015625" />
         <entry key="app/src/main/res/layout/activity_new_drawer.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.253125" />
