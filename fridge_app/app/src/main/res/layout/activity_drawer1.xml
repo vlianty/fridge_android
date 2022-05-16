@@ -7,41 +7,40 @@
     tools:context=".Drawer1Activity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/name"
-        android:text="Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
-        android:layout_marginStart="30dp"
-        android:textSize="30dp"
-        />
+        android:text="Name:"
+        android:textSize="30dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="250dp"
         android:text="Type:"
-        android:textSize="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="250dp"/>
+        android:textSize="30dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/minweight"
-        android:text="Minweight:"
-        android:textSize="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="400dp"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Date"
-        android:text="Date:"
-        android:textSize="30dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="550dp"/>
+        android:layout_marginTop="400dp"
+        android:text="Minweight:"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="550dp"
+        android:text="Date:"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/editbtn"

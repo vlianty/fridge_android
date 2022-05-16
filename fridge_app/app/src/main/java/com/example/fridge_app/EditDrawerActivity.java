@@ -50,6 +50,9 @@ public class EditDrawerActivity extends AppCompatActivity {
         datePickerButton = findViewById(R.id.datePickerButton);
         date = findViewById(R.id.date);
 
+        int i = getIntent().getExtras().getInt("i");
+        int j = getIntent().getExtras().getInt("j");
+
 
         datePicker = new DatePickerDialog.OnDateSetListener(){
             @Override
@@ -79,9 +82,7 @@ public class EditDrawerActivity extends AppCompatActivity {
         submmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(getApplicationContext(), NewDrawerActivity.class);
-                //startActivity(intent);
-                //Log.d("test","1234");
+
                 EditText nameinput = (EditText) findViewById(R.id.nameinput);
                 String name = nameinput.getText().toString();
                 EditText minWeightInput = (EditText)findViewById(R.id.editTextNumber);
@@ -94,8 +95,15 @@ public class EditDrawerActivity extends AppCompatActivity {
                 Log.d("test", Float.toString(minWeight));
                 Log.d("test", Integer.toString(gt));
                 Log.d("test", dateinput);
-                //TextView tv = (TextView) findViewById(R.id.nameinput);
-                //tv.setText(input);
+
+                Intent intent = new Intent();
+                intent.putExtra("name",name);
+                intent.putExtra("minWeight",minWeight);
+                intent.putExtra("gt",gt);
+                intent.putExtra("dateinput",dateinput);
+                setResult(87,intent);
+
+                finish();
             }
         });
     }

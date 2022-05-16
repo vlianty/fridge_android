@@ -44,6 +44,7 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/drawer00"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
@@ -57,8 +58,7 @@
                 android:padding="10dp"
                 android:text="1 vegetable"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:id="@+id/drawer1"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -72,7 +72,7 @@
             android:layout_toRightOf="@+id/text1">
 
             <Button
-                android:id="@+id/text2"
+                android:id="@+id/drawer01"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -106,6 +106,7 @@
             >
 
             <Button
+                android:id="@+id/drawer10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -127,6 +128,7 @@
             android:layout_toRightOf="@+id/text3">
 
             <Button
+                android:id="@+id/drawer11"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -158,6 +160,7 @@
             >
 
             <Button
+                android:id="@+id/drawer20"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -181,6 +184,7 @@
             android:layout_toRightOf="@+id/text5">
 
             <Button
+                android:id="@+id/drawer21"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"

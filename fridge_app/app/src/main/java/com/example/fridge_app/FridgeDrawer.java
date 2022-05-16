@@ -1,8 +1,9 @@
 package com.example.fridge_app;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class FridgeDrawer {
+public class FridgeDrawer implements Serializable {
     DrawerMode mode;
     Goods goods;
     float minWeight;

@@ -1,5 +1,7 @@
 package com.example.fridge_app;
 
-public enum GoodsType {
+import java.io.Serializable;
+
+public enum GoodsType implements Serializable {
     RawMeat, Cooked, Vegetable
 }

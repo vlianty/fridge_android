@@ -1,7 +1,8 @@
 package com.example.fridge_app;
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class controller {
+public class controller implements Serializable {
 
     //View//////////////////////////////////////////////////////////////
 

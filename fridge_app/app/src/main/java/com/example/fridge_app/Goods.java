@@ -1,6 +1,8 @@
 package com.example.fridge_app;
 
-public class Goods {
+import java.io.Serializable;
+
+public class Goods implements Serializable {
     int g_Id;
     GoodsType g_Type;
     String g_Image;
