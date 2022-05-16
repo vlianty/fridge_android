@@ -12,6 +12,7 @@ public class NewDrawerActivity extends AppCompatActivity {
 
     Button editbtn;
     Button [][] drawerButton = new Button[3][2];
+    controller ctrl;
 
 
 
@@ -30,8 +31,11 @@ public class NewDrawerActivity extends AppCompatActivity {
         drawerButton[2][1] = findViewById(R.id.drawer21);
 
         //把主畫面送進來的controller存起來
-        controller ctrl = (controller) getIntent().getSerializableExtra("ctrl");
-        Log.d("test",ctrl.fd[0][0].goods.g_Name);
+        ctrl = (controller) getIntent().getSerializableExtra("ctrl");
+
+        if(ctrl.fd[0][0] != null)   Log.d("test",ctrl.fd[0][0].goods.g_Name);
+        else Log.d("test","ctrl.fd[0][0] == null");
+
 
 //        editbtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -48,6 +52,7 @@ public class NewDrawerActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Drawer1Activity.class);
                 intent.putExtra("i",0);
                 intent.putExtra("j",0);
+                intent.putExtra("ctrl",ctrl);
                 startActivity(intent);
             }
         });
@@ -58,6 +63,7 @@ public class NewDrawerActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Drawer1Activity.class);
                 intent.putExtra("i",0);
                 intent.putExtra("j",1);
+                intent.putExtra("ctrl",ctrl);
                 startActivity(intent);
             }
         });

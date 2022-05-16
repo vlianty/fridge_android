@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class MainActivity extends AppCompatActivity {
 
     Button btnNewOrder,changeProgram, btnProgress, btnSettings, btnContactService, btnMaintenance, btndrawer;
+    public static controller ctrl;
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Controller
         FridgeDrawer[][] fridgeDrawer = new FridgeDrawer[3][2];
-        controller ctrl = new controller(fridgeDrawer);
-        ctrl.setDrawer(0,0,new FridgeDrawer(DrawerMode.Defrost,new Goods(1,GoodsType.Cooked,null,"Apple Pie"),100,LocalDate.now()));
+        ctrl = new controller(fridgeDrawer);
+        //ctrl.setDrawer(0,0,new FridgeDrawer(DrawerMode.Defrost,new Goods(1,GoodsType.Cooked,null,"Apple Pie"),100,LocalDate.now()));
         //Log.d("test",ctrl.fd[0][0].goods.g_Name);
 
         btnSettings.setOnClickListener(new View.OnClickListener() {

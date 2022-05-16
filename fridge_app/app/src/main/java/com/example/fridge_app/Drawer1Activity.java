@@ -22,7 +22,9 @@ public class Drawer1Activity extends AppCompatActivity {
     int gt;
     String dateinput;
 
+    int i,j;
     TextView t_name, t_Type, t_minweight, t_Date;
+    controller ctrl;
 
     //回傳資料回來這個Activity
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -43,23 +45,32 @@ public class Drawer1Activity extends AppCompatActivity {
                             t_name.setText("Name:"+name);
                             t_minweight.setText("Minweight:"+Float.toString(minWeight));
                             t_Date.setText("Date:"+dateinput);
+                            GoodsType tmp = GoodsType.RawMeat;
                             switch (gt)
                             {
                                 case 0:
                                     t_Type.setText("Type:"+GoodsType.RawMeat.toString());
+                                    tmp = GoodsType.RawMeat;
                                     break;
                                 case 1:
                                     t_Type.setText("Type:"+GoodsType.Cooked.toString());
+                                    tmp = GoodsType.Cooked;
                                     break;
                                 case 2:
                                     t_Type.setText("Type:"+GoodsType.Vegetable.toString());
+                                    tmp = GoodsType.Vegetable;
                                     break;
                             }
+                            Goods goods = new Goods(0,tmp,null,name);
+                            //修改//把String日期改成LocalDate
+                            FridgeDrawer fd = new FridgeDrawer(null,goods,minWeight,null);
+                            ctrl.setDrawer(i,j,fd);
 
-                            Log.d("test",name);
+                            /*Log.d("test",name);
                             Log.d("test",Float.toString(minWeight));
                             Log.d("test",Integer.toString(gt));
-                            Log.d("test",dateinput);
+                            Log.d("test",dateinput);*/
+                            Log.d("test","From controller:" + ctrl.fd[i][j].goods.g_Name);
                         }
                     }
                 }
@@ -75,10 +86,13 @@ public class Drawer1Activity extends AppCompatActivity {
         t_minweight = findViewById(R.id.minweight);
         t_Date = findViewById(R.id.Date);
 
-        int i = getIntent().getExtras().getInt("i");
-        int j = getIntent().getExtras().getInt("j");
+        i = getIntent().getExtras().getInt("i");
+        j = getIntent().getExtras().getInt("j");
+        ctrl = (controller) getIntent().getSerializableExtra("ctrl");
         Log.d("test",Integer.toString(i));
         Log.d("test",Integer.toString(j));
+        if(ctrl.fd[i][j] != null)   Log.d("test","From controller:" + ctrl.fd[i][j].goods.g_Name);
+        else Log.d("test","ctrl.fd[0][0] == null");
 
         editbtn.setOnClickListener(new View.OnClickListener() {
             @Override
