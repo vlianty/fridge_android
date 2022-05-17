@@ -54,13 +54,14 @@ public class EditDrawerActivity extends AppCompatActivity {
         int j = getIntent().getExtras().getInt("j");
 
 
+
         datePicker = new DatePickerDialog.OnDateSetListener(){
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth){
                 calendar.set(Calendar.YEAR, year);
                 calendar.set(Calendar.MONTH, monthOfYear);
                 calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                String myFormat = "yyyy/MM/dd";
+                String myFormat = "yyyy-MM-dd";
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.TAIWAN);
                 date.setText("date：" + sdf.format(calendar.getTime()));
                 dateinput = sdf.format(calendar.getTime());

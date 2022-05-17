@@ -37,6 +37,7 @@ public class NewDrawerActivity extends AppCompatActivity {
         else Log.d("test","ctrl.fd[0][0] == null");
 
 
+
 //        editbtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -68,6 +69,21 @@ public class NewDrawerActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        Log.d("test", "refreash");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                if(ctrl.fd[i][j] != null)   drawerButton[i][j].setText(ctrl.fd[i][j].goods.g_Name + "\n" + "N/A" + ".g");
+                else    drawerButton[i][j].setText("Empty");
+            }
+        }
     }
 }
 

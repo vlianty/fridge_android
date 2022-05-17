@@ -7,7 +7,7 @@ public class controller implements Serializable {
     //View//////////////////////////////////////////////////////////////
 
     //Model//////////////////////////////////////////////////////////
-    public FridgeDrawer[][] fd;
+    static public FridgeDrawer[][] fd;
 
 
     controller(FridgeDrawer[][] fd){
