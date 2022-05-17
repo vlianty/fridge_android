@@ -50,6 +50,10 @@ public class EditDrawerActivity extends AppCompatActivity {
         datePickerButton = findViewById(R.id.datePickerButton);
         date = findViewById(R.id.date);
 
+        int i = getIntent().getExtras().getInt("i");
+        int j = getIntent().getExtras().getInt("j");
+
+
 
         datePicker = new DatePickerDialog.OnDateSetListener(){
             @Override
@@ -57,7 +61,7 @@ public class EditDrawerActivity extends AppCompatActivity {
                 calendar.set(Calendar.YEAR, year);
                 calendar.set(Calendar.MONTH, monthOfYear);
                 calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                String myFormat = "yyyy/MM/dd";
+                String myFormat = "yyyy-MM-dd";
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.TAIWAN);
                 date.setText("date：" + sdf.format(calendar.getTime()));
                 dateinput = sdf.format(calendar.getTime());
@@ -79,9 +83,7 @@ public class EditDrawerActivity extends AppCompatActivity {
         submmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(getApplicationContext(), NewDrawerActivity.class);
-                //startActivity(intent);
-                //Log.d("test","1234");
+
                 EditText nameinput = (EditText) findViewById(R.id.nameinput);
                 String name = nameinput.getText().toString();
                 EditText minWeightInput = (EditText)findViewById(R.id.editTextNumber);
@@ -90,12 +92,19 @@ public class EditDrawerActivity extends AppCompatActivity {
                 int gt = spinner.getSelectedItemPosition();
                 GoodsType goodsType = GoodsType.Cooked;
 
-                Log.d("test", name);
+                /*Log.d("test", name);
                 Log.d("test", Float.toString(minWeight));
                 Log.d("test", Integer.toString(gt));
-                Log.d("test", dateinput);
-                //TextView tv = (TextView) findViewById(R.id.nameinput);
-                //tv.setText(input);
+                Log.d("test", dateinput);*/
+
+                Intent intent = new Intent();
+                intent.putExtra("name",name);
+                intent.putExtra("minWeight",minWeight);
+                intent.putExtra("gt",gt);
+                intent.putExtra("dateinput",dateinput);
+                setResult(87,intent);
+
+                finish();
             }
         });
     }
