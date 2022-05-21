@@ -68,16 +68,9 @@ public class Drawer1Activity extends AppCompatActivity {
                                     break;
                             }
                             Goods goods = new Goods(0,tmp,null,name);
-                            //修改//把String日期改成LocalDate
                             ld = LocalDate.parse(dateinput);
                             FridgeDrawer fd = new FridgeDrawer(null,goods,minWeight,ld);
                             ctrl.setDrawer(i,j,fd);
-
-                            /*Log.d("test",name);
-                            Log.d("test",Float.toString(minWeight));
-                            Log.d("test",Integer.toString(gt));
-                            Log.d("test",dateinput);*/
-                            Log.d("test","From controller:" + ctrl.fd[i][j].goods.g_Name);
                         }
                     }
                 }
@@ -95,12 +88,7 @@ public class Drawer1Activity extends AppCompatActivity {
 
         i = getIntent().getExtras().getInt("i");
         j = getIntent().getExtras().getInt("j");
-        ctrl = (controller) getIntent().getSerializableExtra("ctrl");
-
-        Log.d("test",Integer.toString(i));
-        Log.d("test",Integer.toString(j));
-        if(ctrl.fd[i][j] != null)   Log.d("test","From controller:" + ctrl.fd[i][j].goods.g_Name);
-        else Log.d("test","ctrl.fd[0][0] == null");
+        ctrl = controller.getInstance();
 
         //進入畫面時設定初始數值
         if(ctrl.fd[i][j] != null)
@@ -118,7 +106,6 @@ public class Drawer1Activity extends AppCompatActivity {
                 intent.putExtra("i",i);
                 intent.putExtra("j",j);
                 activityResultLauncher.launch(intent);
-//                startActivity(intent);
             }
         });
     }
