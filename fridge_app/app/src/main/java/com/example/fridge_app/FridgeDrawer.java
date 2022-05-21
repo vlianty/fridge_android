@@ -2,6 +2,7 @@ package com.example.fridge_app;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class FridgeDrawer implements Serializable {
     float minWeight;
     LocalDate Exdate;
     WeightSensor weightSensor = new WeightSensor();
+    NotificationSender notificationSender = new NotificationSender();
 
     FridgeDrawer(DrawerMode mode, Goods goods, float minWeight, LocalDate Exdate)
     {
@@ -24,22 +26,22 @@ public class FridgeDrawer implements Serializable {
     }
 
     //如果重量太低回傳True
-    public void CheckWeight()
+    public void CheckWeight(AppCompatActivity app)
     {
         if (weightSensor.getWeight() < minWeight)
         {
             //修改//等Notifier做好要呼叫Notifier
-            Log.d("test",goods.g_Name + " is under weight");
+            notificationSender.AlertLowStock(app, goods.g_Name);
         }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void CheckExpDate(LocalDate curDate)
+    public void CheckExpDate(AppCompatActivity app, LocalDate curDate)
     {
         //修改//加Notifier
         if(ChronoUnit.DAYS.between(curDate, Exdate) <= 3)
         {
-            System.out.println(goods.g_Name + " will expire in " + ChronoUnit.DAYS.between(curDate, Exdate) + " days");
+            notificationSender.AlertExp(app, goods.g_Name);
         }
     }
 

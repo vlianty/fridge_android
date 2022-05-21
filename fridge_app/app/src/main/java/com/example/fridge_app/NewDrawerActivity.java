@@ -1,12 +1,16 @@
 package com.example.fridge_app;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import java.time.LocalDate;
 
 public class NewDrawerActivity extends AppCompatActivity {
 
@@ -53,6 +57,7 @@ public class NewDrawerActivity extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onResume()
     {
@@ -70,12 +75,18 @@ public class NewDrawerActivity extends AppCompatActivity {
             }
         }
 
-        //目前只有一個weightsensor所以只改第一格
+        //目前只有一個weightsensor所以只改第一格//just for demonstrate
         if(ctrl.fd[0][0] != null)
         {
             drawerButton[0][0].setText(ctrl.fd[0][0].goods.g_Name + "\n" + ctrl.fd[0][0].getWeight() + "g");
-            ctrl.fd[0][0].CheckWeight();
+            ctrl.fd[0][0].CheckWeight(this);
+            ctrl.fd[0][0].CheckExpDate(this, LocalDate.now());
         }
+        if(ctrl.fd[0][1] != null)
+        {
+            ctrl.fd[0][1].CheckExpDate(this, LocalDate.now());
+        }
+        //目前只有一個weightsensor所以只改第一格//just for demonstrate
     }
 }
 

@@ -57,10 +57,6 @@ public class controller implements Serializable {
                 }
             }
         }*/
-        if(fd[0][0] != null)
-        {
-
-        }
     }
 
     //交換位置
@@ -75,13 +71,13 @@ public class controller implements Serializable {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void checkExpDate()
     {
-        for (int i = 0; i < fd.length; i++)
+        /*for (int i = 0; i < fd.length; i++)
         {
             for (int j = 0; j < fd[0].length;j++)
             {
-                if(fd[i][j] != null) fd[i][j].CheckExpDate(LocalDate.now());
+
             }
-        }
+        }*/
     }
 
 }

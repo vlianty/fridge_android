@@ -14,7 +14,7 @@ public class NotificationSender{
         builder = new NotificationCompat.Builder(m,CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.btn_star_big_on)
                 .setContentTitle("低庫存警告!")
-                .setContentText("該補貨囉!")
+                .setContentText(GoodName + "該補貨囉!")
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE);
