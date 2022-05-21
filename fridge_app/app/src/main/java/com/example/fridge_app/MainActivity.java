@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /**檢查手機版本是否支援通知；若支援則新增"頻道"*/
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        //檢查手機版本是否支援通知，若支援則新增channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID, "DemoCode", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
@@ -37,26 +37,23 @@ public class MainActivity extends AppCompatActivity {
             manager.createNotificationChannel(channel);
         }
 
-
         Button btDefault;
         btDefault = findViewById(R.id.notification);
         btDefault.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                NotificationCompat.Builder builder
-                        = new NotificationCompat.Builder(MainActivity.this,CHANNEL_ID)
+                NotificationSender ns = new NotificationSender();
+                ns.builder = new NotificationCompat.Builder(MainActivity.this,CHANNEL_ID)
                         .setSmallIcon(R.drawable.carrot)
-                        .setContentTitle("低庫存警告!")
-                        .setContentText("該補貨囉")
+                        .setContentTitle(ns.WarnComponentTitle()) //通知的title，NotificationSender有可以切換的文字
+                        .setContentText(ns.WarnComponentText())//通知的內文，因為還不知道要在哪判斷，所以先這樣寫
                         .setAutoCancel(true)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
                         .setCategory(NotificationCompat.CATEGORY_MESSAGE);
-
-
                 NotificationManagerCompat notificationManagerCompat
                         = NotificationManagerCompat.from(MainActivity.this);
-                notificationManagerCompat.notify(1,builder.build());
+                notificationManagerCompat.notify(1,NotificationSender.builder.build());
+
             }
         });
 
@@ -111,6 +108,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        }
     }
-
+}
