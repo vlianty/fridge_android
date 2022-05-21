@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //檢查手機版本是否支援通知，若支援則新增channel
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
             NotificationChannel channel = new NotificationChannel(
@@ -43,17 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 NotificationSender ns = new NotificationSender();
-                ns.builder = new NotificationCompat.Builder(MainActivity.this,CHANNEL_ID)
-                        .setSmallIcon(R.drawable.carrot)
-                        .setContentTitle(ns.WarnComponentTitle()) //通知的title，NotificationSender有可以切換的文字
-                        .setContentText(ns.WarnComponentText())//通知的內文，因為還不知道要在哪判斷，所以先這樣寫
-                        .setAutoCancel(true)
-                        .setPriority(NotificationCompat.PRIORITY_HIGH)
-                        .setCategory(NotificationCompat.CATEGORY_MESSAGE);
-                NotificationManagerCompat notificationManagerCompat
-                        = NotificationManagerCompat.from(MainActivity.this);
-                notificationManagerCompat.notify(1,NotificationSender.builder.build());
-
+                ns.WrongTemp(MainActivity.this);
             }
         });
 

@@ -1,42 +1,68 @@
 package com.example.fridge_app;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 public class NotificationSender{
     public static NotificationCompat.Builder builder;
-    public String GoodName = "大高麗菜";
+    private String CHANNEL_ID = "Coder";
 
-    public  String AltLowStockTitle()
+    public void AlertLowStock(AppCompatActivity m, String GoodName )
     {
-        return "低庫存警告!";
+
+        builder = new NotificationCompat.Builder(m,CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.btn_star_big_on)
+                .setContentTitle("低庫存警告!")
+                .setContentText("該補貨囉!")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
+        NotificationManagerCompat notificationManagerCompat
+                = NotificationManagerCompat.from(m);
+        notificationManagerCompat.notify(1,NotificationSender.builder.build());
     }
-    public  String AltLowStockText()
+    public void AlertExp(AppCompatActivity m, String GoodName)
     {
-        return "該補貨囉";
+
+        builder = new NotificationCompat.Builder(m,CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.btn_star_big_on)
+                .setContentTitle("到期通知!")
+                .setContentText(GoodName + "即將到期!!!")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
+        NotificationManagerCompat notificationManagerCompat
+                = NotificationManagerCompat.from(m);
+        notificationManagerCompat.notify(1,NotificationSender.builder.build());
     }
-    public  String ExpTitle()
+    public void WrongTemp(AppCompatActivity m)
     {
-        return "到期通知!";
+
+        builder = new NotificationCompat.Builder(m,CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setContentTitle("溫度異常!")
+                .setContentText("快去確認一下冰箱的狀況!!")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
+        NotificationManagerCompat notificationManagerCompat
+                = NotificationManagerCompat.from(m);
+        notificationManagerCompat.notify(1,NotificationSender.builder.build());
     }
-    public  String  ExpText()
+    public void WarnComponent(AppCompatActivity m)
     {
-        return GoodName + "即將到期!!!";
-    }
-    public  String WrongTempTitle()
-    {
-        return "溫度異常!";
-    }
-    public  String  WrongTempText()
-    {
-        return "快去確認一下冰箱的狀況!!";
-    }
-    public  String WarnComponentTitle()
-    {
-        return "零件異常!";
-    }
-    public  String  WarnComponentText()
-    {
-        return "有零件壞掉了，快聯繫客服!";
+
+        builder = new NotificationCompat.Builder(m,CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setContentTitle("零件異常!")
+                .setContentText("有零件壞掉了，快聯繫客服!")
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE);
+        NotificationManagerCompat notificationManagerCompat
+                = NotificationManagerCompat.from(m);
+        notificationManagerCompat.notify(1,NotificationSender.builder.build());
     }
 
 
