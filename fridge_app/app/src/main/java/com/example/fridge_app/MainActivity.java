@@ -18,9 +18,8 @@ import java.time.LocalDate;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnNewOrder,changeProgram, btnProgress, btnSettings, btnContactService, btnMaintenance, btndrawer;
-    public static controller ctrl;
-    private String CHANNEL_ID = "Coder";
+    private Button btnNewOrder,changeProgram, btnProgress, btnSettings, btnContactService, btnMaintenance, btndrawer;
+    private static controller ctrl;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
             NotificationChannel channel = new NotificationChannel(
-                    CHANNEL_ID, "DemoCode", NotificationManager.IMPORTANCE_DEFAULT);
+                    "Coder", "DemoCode", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             assert manager != null;
             manager.createNotificationChannel(channel);

@@ -2,6 +2,7 @@ package com.example.fridge_app;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.time.LocalDate;
 import java.io.Serializable;
@@ -20,6 +21,8 @@ public class controller implements Serializable {
 
     //Model//////////////////////////////////////////////////////////
     static public FridgeDrawer[][] fd;
+    private TemperatureSensor temperatureSensor = new TemperatureSensor();
+    private NotificationSender notificationSender = new NotificationSender();
 
 
     private controller(FridgeDrawer[][] fd){
@@ -78,6 +81,15 @@ public class controller implements Serializable {
 
             }
         }*/
+    }
+
+    //確認溫度
+    public void checkTemp(AppCompatActivity app)
+    {
+        if(temperatureSensor.getCelsius() > 11)
+        {
+            notificationSender.WrongTemp(app);
+        }
     }
 
     public String getG_Name(int i, int j) {

@@ -93,6 +93,7 @@ public class Drawer1Activity extends AppCompatActivity {
         //進入畫面時設定初始數值
         if(ctrl.fd[i][j] != null)
         {
+
             t_name.setText("Name:"+ctrl.getG_Name(i,j));
             t_minweight.setText("Minweight:"+Float.toString(ctrl.getG_minWeight(i,j)));
             t_Date.setText("Date:"+ctrl.getG_ExDate(i,j).toString());
