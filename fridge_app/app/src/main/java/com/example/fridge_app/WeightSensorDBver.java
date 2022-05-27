@@ -5,7 +5,7 @@ import android.util.Log;
 import java.sql.*;
 
 public class WeightSensorDBver {
-    double getWeight(int drawerID)
+    public double getWeight(int drawerID)
     {
         Connection connection;
         try

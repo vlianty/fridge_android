@@ -2,7 +2,7 @@ package com.example.fridge_app;
 
 import java.sql.*;
 public class TemperatureSensorDBver {
-    double getFahrenheit(int fridgeNum)
+    public double getFahrenheit(int fridgeNum)
     {
         Connection connection;
         try
@@ -23,7 +23,7 @@ public class TemperatureSensorDBver {
         return 0.0;
     }
 
-    double getCelsius(int fridgeNum)
+    public double getCelsius(int fridgeNum)
     {
         Connection connection;
         try
@@ -43,7 +43,7 @@ public class TemperatureSensorDBver {
         }
         return 0.0;
     }
-    double getHumidity(int fridgeNum)
+    public double getHumidity(int fridgeNum)
     {
         Connection connection;
         try
