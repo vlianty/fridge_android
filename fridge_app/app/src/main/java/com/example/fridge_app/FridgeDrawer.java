@@ -10,12 +10,12 @@ import java.time.temporal.ChronoUnit;
 import android.util.Log;
 
 public class FridgeDrawer implements Serializable {
-    DrawerMode mode;
-    Goods goods;
-    float minWeight;
-    LocalDate Exdate;
-    WeightSensor weightSensor = new WeightSensor();
-    NotificationSender notificationSender = new NotificationSender();
+    private DrawerMode mode;
+    private Goods goods;
+    private float minWeight;
+    private LocalDate Exdate;
+    private WeightSensor weightSensor = new WeightSensor();
+    private NotificationSender notificationSender = new NotificationSender();
 
     FridgeDrawer(DrawerMode mode, Goods goods, float minWeight, LocalDate Exdate)
     {
@@ -48,5 +48,21 @@ public class FridgeDrawer implements Serializable {
     public double getWeight()
     {
         return weightSensor.getWeight();
+    }
+
+    public String getG_Name() {
+        return goods.g_Name;
+    }
+
+    public float getG_minWeight() {
+        return minWeight;
+    }
+
+    public LocalDate getG_ExDate() {
+        return Exdate;
+    }
+
+    public GoodsType getG_Type() {
+        return goods.g_Type;
     }
 }

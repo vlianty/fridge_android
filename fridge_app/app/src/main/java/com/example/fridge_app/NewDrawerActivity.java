@@ -69,7 +69,7 @@ public class NewDrawerActivity extends AppCompatActivity {
             {
                 if(ctrl.fd[i][j] != null)
                 {
-                    drawerButton[i][j].setText(ctrl.fd[i][j].goods.g_Name + "\n" + "N/A.g");
+                    drawerButton[i][j].setText(ctrl.getG_Name(i,j) + "\n" + "N/A.g");
                 }
                 else    drawerButton[i][j].setText("Empty");
             }
@@ -78,7 +78,7 @@ public class NewDrawerActivity extends AppCompatActivity {
         //目前只有一個weightsensor所以只改第一格//just for demonstrate
         if(ctrl.fd[0][0] != null)
         {
-            drawerButton[0][0].setText(ctrl.fd[0][0].goods.g_Name + "\n" + ctrl.fd[0][0].getWeight() + "g");
+            drawerButton[0][0].setText(ctrl.getG_Name(0, 0) + "\n" + ctrl.fd[0][0].getWeight() + "g");
             ctrl.fd[0][0].CheckWeight(this);
             ctrl.fd[0][0].CheckExpDate(this, LocalDate.now());
         }

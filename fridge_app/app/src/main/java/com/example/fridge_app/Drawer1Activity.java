@@ -93,10 +93,10 @@ public class Drawer1Activity extends AppCompatActivity {
         //進入畫面時設定初始數值
         if(ctrl.fd[i][j] != null)
         {
-            t_name.setText("Name:"+ctrl.fd[i][j].goods.g_Name);
-            t_minweight.setText("Minweight:"+Float.toString(ctrl.fd[i][j].minWeight));
-            t_Date.setText("Date:"+ctrl.fd[i][j].Exdate.toString());
-            t_Type.setText("Type:"+ctrl.fd[i][j].goods.g_Type.toString());
+            t_name.setText("Name:"+ctrl.getG_Name(i,j));
+            t_minweight.setText("Minweight:"+Float.toString(ctrl.getG_minWeight(i,j)));
+            t_Date.setText("Date:"+ctrl.getG_ExDate(i,j).toString());
+            t_Type.setText("Type:"+ctrl.getG_Type(i,j).toString());
         }
 
         editbtn.setOnClickListener(new View.OnClickListener() {

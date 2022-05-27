@@ -80,4 +80,19 @@ public class controller implements Serializable {
         }*/
     }
 
+    public String getG_Name(int i, int j) {
+        return fd[i][j].getG_Name();
+    }
+
+    public float getG_minWeight(int i, int j) {
+        return  fd[i][j].getG_minWeight();
+    }
+
+    public LocalDate getG_ExDate(int i, int j) {
+        return fd[i][j].getG_ExDate();
+    }
+
+    public GoodsType getG_Type(int i, int j) {
+        return fd[i][j].getG_Type();
+    }
 }
