@@ -33,13 +33,15 @@
         android:layout_above="@+id/buttons"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
-        android:text="Drawer"
+        android:backgroundTint="#ECC0C4"
+        android:text="Manage Goods"
+        android:textColor="#4E5155"
         android:textSize="20sp" />
 
     <RelativeLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         android:layout_alignParentBottom="true">
 
         <GridLayout
@@ -50,7 +52,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
 
                 >
@@ -66,6 +68,8 @@
                     android:layout_width="180dp"
                     android:layout_height="100dp"
                     android:text="New Order"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -79,6 +83,8 @@
                     android:layout_height="100dp"
                     android:layout_gravity="start"
                     android:text="Change Program"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -90,7 +96,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -103,6 +109,8 @@
                     android:layout_width="180dp"
                     android:layout_height="100dp"
                     android:text="Progress Query"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -116,6 +124,8 @@
                     android:layout_height="100dp"
                     android:layout_gravity="start"
                     android:text="Settings"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -127,7 +137,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -141,6 +151,8 @@
                     android:layout_height="100dp"
                     android:paddingLeft="10dp"
                     android:text="Contact Service"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -154,6 +166,8 @@
                     android:layout_height="100dp"
                     android:layout_gravity="start"
                     android:text="maintenance"
+                    android:backgroundTint="#ECC0C4"
+                    android:textColor="#4E5155"
                     android:textSize="20sp" />
 
                 <Space
@@ -174,7 +188,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="314dp"
         android:layout_marginBottom="537dp"
-        android:text="通知" />
+        android:text="Inform"
+        android:backgroundTint="#ECC0C4"
+        android:textColor="#4E5155"
+        />
 
 
 </RelativeLayout>
