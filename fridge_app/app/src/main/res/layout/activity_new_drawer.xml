@@ -52,11 +52,11 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="1 vegetable"
+                android:textColor="#4E5155"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -75,11 +75,11 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="2 vegetable"
+                android:textColor="#4E5155"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -109,8 +109,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
+                android:textColor="#4E5155"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="2 seafood"
@@ -131,8 +131,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
+                android:textColor="#4E5155"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="3 seafood"
@@ -163,8 +163,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
+                android:textColor="#4E5155"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="3 meat"
@@ -187,8 +187,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/round_button"
-                android:backgroundTint="@color/white_grey"
+                android:backgroundTint="#ECC0C4"
+                android:textColor="#4E5155"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="3 meat"
@@ -199,23 +199,63 @@
 
     </RelativeLayout>
 
-
- <!--   <SeekBar
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/button433"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/seektext3" />
-
-    <TextView
-        android:id="@+id/seektext3"
-        android:layout_width="346dp"
-        android:layout_height="25dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="current_temperature_8"
-        android:textSize="14sp"
-        />-->
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="464dp"
+        android:layout_toStartOf="@+id/editbtn"
+        android:text="433" />
+
+    <Button
+        android:id="@+id/button846"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="465dp"
+        android:layout_toStartOf="@+id/button433"
+        android:text="846" />
+
+    <Button
+        android:id="@+id/button847"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="463dp"
+        android:layout_toStartOf="@+id/button846"
+        android:text="847" />
+
+    <Button
+        android:id="@+id/button432"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button847"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="11dp"
+        android:text="432" />
+
+
+    <!--   <SeekBar
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/seektext3" />
+
+       <TextView
+           android:id="@+id/seektext3"
+           android:layout_width="346dp"
+           android:layout_height="25dp"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="50dp"
+           android:gravity="center"
+           android:text="current_temperature_8"
+           android:textSize="14sp"
+           />-->
 
 </RelativeLayout>

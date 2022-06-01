@@ -48,9 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
-        android:text="edit"
         android:backgroundTint="#ECC0C4"
-        android:textColor="#4E5155"
-        />
+        android:text="edit"
+        android:textColor="#4E5155" />
 
 </RelativeLayout>

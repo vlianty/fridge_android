@@ -65,4 +65,8 @@ public class FridgeDrawer implements Serializable {
     public GoodsType getG_Type() {
         return goods.g_Type;
     }
+
+    public WeightSensor getWeightSensor() {
+        return weightSensor;
+    }
 }
