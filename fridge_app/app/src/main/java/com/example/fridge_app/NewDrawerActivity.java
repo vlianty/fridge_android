@@ -62,36 +62,44 @@ public class NewDrawerActivity extends AppCompatActivity {
             }
         });
 
-        
+        drawerButton[1][1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Drawer1Activity.class);
+                intent.putExtra("i",1);
+                intent.putExtra("j",1);
+                startActivity(intent);
+            }
+        });
 
         //寫四個button來刷新重量432-847(6)-433，去呼叫weightsensor，然後再呼叫確認重量
         b_432.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctrl.fd[0][0].getWeightSensor().setWeight(432);
-                drawerButton[0][0].setText(ctrl.getG_Name(0, 0) + "\n" + ctrl.fd[0][0].getWeight() + "g");
+                ctrl.fd[1][1].getWeightSensor().setWeight(432);
+                drawerButton[1][1].setText(ctrl.getG_Name(1, 1) + "\n" + (int)ctrl.fd[1][1].getWeight() + "g");
             }
         });
         b_433.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctrl.fd[0][0].getWeightSensor().setWeight(433);
-                drawerButton[0][0].setText(ctrl.getG_Name(0, 0) + "\n" + ctrl.fd[0][0].getWeight() + "g");
-                ctrl.fd[0][0].CheckWeight(app);
+                ctrl.fd[1][1].getWeightSensor().setWeight(433);
+                drawerButton[1][1].setText(ctrl.getG_Name(1, 1) + "\n" + (int)ctrl.fd[1][1].getWeight() + "g");
+                ctrl.fd[1][1].CheckWeight(app);
             }
         });
         b_846.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctrl.fd[0][0].getWeightSensor().setWeight(846);
-                drawerButton[0][0].setText(ctrl.getG_Name(0, 0) + "\n" + ctrl.fd[0][0].getWeight() + "g");
+                ctrl.fd[1][1].getWeightSensor().setWeight(846);
+                drawerButton[1][1].setText(ctrl.getG_Name(1, 1) + "\n" + (int)ctrl.fd[1][1].getWeight() + "g");
             }
         });
         b_847.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctrl.fd[0][0].getWeightSensor().setWeight(847);
-                drawerButton[0][0].setText(ctrl.getG_Name(0, 0) + "\n" + ctrl.fd[0][0].getWeight() + "g");
+                ctrl.fd[1][1].getWeightSensor().setWeight(847);
+                drawerButton[1][1].setText(ctrl.getG_Name(1, 1) + "\n" + (int)ctrl.fd[1][1].getWeight() + "g");
             }
         });
     }
@@ -125,6 +133,12 @@ public class NewDrawerActivity extends AppCompatActivity {
         {
             ctrl.fd[0][1].CheckExpDate(this, LocalDate.now());
         }
+
+        if(ctrl.fd[1][1] != null)
+        {
+            drawerButton[1][1].setText(ctrl.getG_Name(1, 1) + "\n" + (int)ctrl.fd[1][1].getWeight() + "g");
+        }
+
         //目前只有一個weightsensor所以只改第一格//just for demonstrate
     }
 }

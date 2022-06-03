@@ -207,6 +207,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="464dp"
         android:layout_toStartOf="@+id/editbtn"
+        android:backgroundTint="#FFFFFF"
         android:text="433" />
 
     <Button
@@ -217,6 +218,7 @@
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="465dp"
         android:layout_toStartOf="@+id/button433"
+        android:backgroundTint="#FFFFFF"
         android:text="846" />
 
     <Button
@@ -227,6 +229,7 @@
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="463dp"
         android:layout_toStartOf="@+id/button846"
+        android:backgroundTint="#FFFFFF"
         android:text="847" />
 
     <Button
@@ -237,6 +240,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="304dp"
         android:layout_marginBottom="11dp"
+        android:backgroundTint="#FFFFFF"
         android:text="432" />
 
 
