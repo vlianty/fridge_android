@@ -30,8 +30,10 @@ public class controller implements Serializable {
     }
 
     //設定格子
-    public void setDrawer(int i, int j, FridgeDrawer fridegeDrawer) {
-        fd[i][j] = fridegeDrawer;
+    public void setDrawer(int id, GoodsType tmp, String img, String name, float minWeight, LocalDate ld, int i, int j) {
+        Goods goods = new Goods(id,tmp,img,name);
+        FridgeDrawer fd = new FridgeDrawer(null,goods,minWeight,ld);
+        this.fd[i][j] = fd;
     }
 
     //清除格子
@@ -47,19 +49,18 @@ public class controller implements Serializable {
     }
 
     //檢查重量
-    public void CheckAllWeight()
+    public void CheckAllWeight(AppCompatActivity app)
     {
-        /*for (int i = 0; i < fd.length; i++)
+        for (int i = 0; i < fd.length; i++)
         {
             for (int j = 0; j < fd[0].length;j++)
             {
                 if(fd[i][j] != null)
                 {
-                    //修改//等WeightSensor做好要改成變數
-                    fd[i][j].CheckWeight(10);
+                    fd[i][j].CheckWeight(app);
                 }
             }
-        }*/
+        }
     }
 
     //交換位置
@@ -107,4 +108,5 @@ public class controller implements Serializable {
     public GoodsType getG_Type(int i, int j) {
         return fd[i][j].getG_Type();
     }
+
 }

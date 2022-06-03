@@ -8,10 +8,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.icu.util.LocaleData;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -67,14 +65,12 @@ public class Drawer1Activity extends AppCompatActivity {
                                     tmp = GoodsType.Vegetable;
                                     break;
                             }
-                            Goods goods = new Goods(0,tmp,null,name);
-                            ld = LocalDate.parse(dateinput);
-                            FridgeDrawer fd = new FridgeDrawer(null,goods,minWeight,ld);
-                            ctrl.setDrawer(i,j,fd);
+                                ld = LocalDate.parse(dateinput);
+                                ctrl.setDrawer(0,tmp,null,name,minWeight,ld,i,j);
                         }
                     }
-                }
-            });
+                }            });
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

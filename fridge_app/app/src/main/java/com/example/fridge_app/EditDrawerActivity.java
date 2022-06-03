@@ -92,11 +92,6 @@ public class EditDrawerActivity extends AppCompatActivity {
                 int gt = spinner.getSelectedItemPosition();
                 GoodsType goodsType = GoodsType.Cooked;
 
-                /*Log.d("test", name);
-                Log.d("test", Float.toString(minWeight));
-                Log.d("test", Integer.toString(gt));
-                Log.d("test", dateinput);*/
-
                 Intent intent = new Intent();
                 intent.putExtra("name",name);
                 intent.putExtra("minWeight",minWeight);
